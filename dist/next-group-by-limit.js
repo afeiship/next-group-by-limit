@@ -2,7 +2,7 @@
  * name: next-group-by-limit
  * url: https://github.com/afeiship/next-group-by-limit
  * version: 1.0.0
- * date: 2019-09-04T15:52:34.781Z
+ * date: 2019-09-04T16:10:50.050Z
  * license: MIT
  */
 
@@ -15,13 +15,13 @@
     var len = inArray.length;
     var result = [];
     var list = inArray.slice(0);
-    if (len === 1) return [inArray];
+    if (len === 1) return [list];
     if (len === 2) {
-      total = inArray[0] + inArray[1];
+      total = list[0] + list[1];
       if (total <= inLimit) {
-        return [inArray];
+        return [list];
       } else {
-        return [[inArray[0]], [inArray[1]]];
+        return [[list[0]], [list[1]]];
       }
     }
 

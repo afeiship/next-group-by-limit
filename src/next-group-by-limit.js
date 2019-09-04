@@ -7,13 +7,13 @@
     var len = inArray.length;
     var result = [];
     var list = inArray.slice(0);
-    if (len === 1) return [inArray];
+    if (len === 1) return [list];
     if (len === 2) {
-      total = inArray[0] + inArray[1];
+      total = list[0] + list[1];
       if (total <= inLimit) {
-        return [inArray];
+        return [list];
       } else {
-        return [[inArray[0]], [inArray[1]]];
+        return [[list[0]], [list[1]]];
       }
     }
 
