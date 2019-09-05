@@ -27,6 +27,10 @@
         if (total >= inLimit) {
           result.push(inList.splice(0, idx));
           groupBy(list);
+        } else {
+          if (i === inList.length) {
+            result.push(inList);
+          }
         }
       }
       return result;

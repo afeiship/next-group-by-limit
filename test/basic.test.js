@@ -46,7 +46,7 @@ describe('only two elements', function() {
 });
 
 describe('more elements', function() {
-  test('more elements', function() {
+  test('more elements1', function() {
     var list1 = [10, 40, 50, 45, 23, 12, 100, 123, 120, 12, 12, 123, 123, 2, 123, 144, 198, 130];
     var limit = 130;
     var groups = nx.groupByLimit(list1, limit);
@@ -64,6 +64,18 @@ describe('more elements', function() {
       [144],
       [198],
       [130]
+    ]);
+  });
+
+  test('more elements2', function() {
+    var list1 = [105.4208984375, 105.4208984375, 132.373046875, 132.373046875, 132.373046875];
+    var limit = 400;
+    var groups = nx.groupByLimit(list1, limit);
+
+    // console.log('groups:->', groups);
+    expect(groups).toEqual([
+      [105.4208984375, 105.4208984375, 132.373046875],
+      [132.373046875, 132.373046875]
     ]);
   });
 });

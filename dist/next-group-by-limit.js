@@ -2,7 +2,7 @@
  * name: next-group-by-limit
  * url: https://github.com/afeiship/next-group-by-limit
  * version: 1.0.0
- * date: 2019-09-04T16:10:50.050Z
+ * date: 2019-09-05T08:03:22.316Z
  * license: MIT
  */
 
@@ -35,6 +35,10 @@
         if (total >= inLimit) {
           result.push(inList.splice(0, idx));
           groupBy(list);
+        } else {
+          if (i === inList.length) {
+            result.push(inList);
+          }
         }
       }
       return result;
